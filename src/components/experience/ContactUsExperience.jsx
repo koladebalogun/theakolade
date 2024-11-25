@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import React from "react";
+import React, { useState } from "react";
 import { SheetProvider } from "@theatre/r3f";
 import { sRGBEncoding, ACESFilmicToneMapping } from "three";
 import gsap from "gsap";
@@ -19,6 +19,9 @@ export default function ContactUsExperience() {
   });
   const sheet = theatreProject.sheet("ContactUsScene");
   const [currentScene] = useAtom(currentSceneAtom1);
+
+  // State for iframe loading
+  const [iframeLoaded, setIframeLoaded] = useState(false);
 
   return (
     <div className="contact-us-wrapper">
@@ -42,7 +45,16 @@ export default function ContactUsExperience() {
 
       {currentScene === 5 && (
         <div className="iframe-container">
-          <iframe src="https://koladescontact.vercel.app/" />
+          {!iframeLoaded && (
+            <div className="loading-message">
+              <p style={{color:"white"}}>Loading...</p>
+            </div>
+          )}
+          <iframe
+            src="https://koladescontact.vercel.app/"
+            onLoad={() => setIframeLoaded(true)}
+            style={{ display: iframeLoaded ? "block" : "none" }}
+          />
         </div>
       )}
 

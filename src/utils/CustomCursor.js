@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [trailPosition, setTrailPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -17,7 +18,14 @@ const CustomCursor = () => {
     };
   }, []);
 
-  return <div className="cursor" style={{ left: `${position.x}px`, top: `${position.y}px` }} />;
+  return (
+    <>
+      <div
+        className="cursor"
+        style={{ left: `${position.x}px`, top: `${position.y}px` }}
+      />
+    </>
+  );
 };
 
 export default CustomCursor;

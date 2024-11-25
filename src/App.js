@@ -2,7 +2,7 @@ import React, { Suspense, useEffect } from "react";
 import Interface from "./components/Interface";
 import Navbar from "./components/nav/Navbar";
 import { useProgress } from "@react-three/drei";
-import CustomCursor from "./utils/CustomeCursor";
+import CustomCursor from "./utils/CustomCursor";
 
 function App() {
   const {progress} = useProgress()
