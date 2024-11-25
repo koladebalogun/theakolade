@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { Environment, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { val } from "@theatre/core";
@@ -7,7 +8,6 @@ import {
   editable as e,
 } from "@theatre/r3f";
 
-import React, { useEffect } from "react";
 import { useAtom } from "jotai";
 import { currentPageAtom, currentSceneAtom1 } from "../../../utils/GlobalState";
 import Office from "../../models/Office";

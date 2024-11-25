@@ -1,6 +1,6 @@
 import React, { useRef, useLayoutEffect } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Center, ScrollControls, Text, Text3D } from "@react-three/drei";
+import { Center, ScrollControls, Text } from "@react-three/drei";
 import { getProject } from "@theatre/core";
 import { SheetProvider, editable as e } from "@theatre/r3f";
 import Scene from "../scenes/banner/BannerScene";

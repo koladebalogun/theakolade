@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from 'react'
-import { editable as e, useCurrentSheet } from '@theatre/r3f'
+import { editable as e } from '@theatre/r3f'
 import { SpotLightHelper } from 'three'
 import { extend, useFrame, useThree } from '@react-three/fiber'
 

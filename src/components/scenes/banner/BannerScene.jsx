@@ -1,4 +1,4 @@
-import { Environment, OrbitControls, useScroll } from "@react-three/drei";
+import { Environment, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { val } from "@theatre/core";
 import {

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { ImageProps, Image, useScroll } from "@react-three/drei";
+import { Image, useScroll } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import img1 from "../../../images/img1.jpeg";
 import img2 from "../../../images/img2.jpeg";

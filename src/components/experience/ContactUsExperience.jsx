@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import React from "react";
-import { SheetProvider, editable as e } from "@theatre/r3f";
+import { SheetProvider } from "@theatre/r3f";
 import { sRGBEncoding, ACESFilmicToneMapping } from "three";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";

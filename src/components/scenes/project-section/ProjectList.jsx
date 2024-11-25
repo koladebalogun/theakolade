@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Projects from "./Projects";
 import Scene from "../image-shader/ImageShaderScene";
 
