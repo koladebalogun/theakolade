@@ -20,7 +20,6 @@ export default function ContactUsExperience() {
   const sheet = theatreProject.sheet("ContactUsScene");
   const [currentScene] = useAtom(currentSceneAtom1);
 
-  // State for iframe loading
   const [iframeLoaded, setIframeLoaded] = useState(false);
 
   return (

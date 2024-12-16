@@ -40,7 +40,7 @@ export default function PreLoader({ setIsLoaded }) {
         <Canvas>
           <ambientLight intensity={0.5} />
           <directionalLight position={[5, 5, 5]} />
-          <Robo />
+          {/* <Robo /> */}
         </Canvas>
       </div>
     </motion.div>
