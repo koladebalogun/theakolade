@@ -24,7 +24,7 @@ export default function ContactUsExperience() {
 
   return (
     <div className="contact-us-wrapper">
-      <Canvas
+      {/* <Canvas
         shadows
         style={{
           width: "100%",
@@ -62,7 +62,7 @@ export default function ContactUsExperience() {
           <p>Scroll Down</p>
           <div className="contact-indicator"></div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

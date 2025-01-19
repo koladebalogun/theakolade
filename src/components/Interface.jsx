@@ -52,17 +52,17 @@ export default function Interface() {
         transition={{ duration: 1.5, ease: "easeInOut" }}
       >
         <Experience />
+        
       </motion.div>
 
-      <Section className="project-container">
-        <ProjectExperience />
-      </Section>
-
+        <Section className="project-container">
+          <ProjectExperience />
+        </Section>
       <ProjectList />
 
-      <Section>
+      {/* <Section>
         <ContactUsExperience />
-      </Section>
+      </Section> */}
     </div>
   );
 }
