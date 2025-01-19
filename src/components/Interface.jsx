@@ -10,9 +10,9 @@ const Section = ({ children, className }) => {
   return (
     <motion.section
       className={`section ${className}`}
-      // initial={{ opacity: 0, y: 50 }}
-      // animate={{ opacity: 1, y: 0 }}
-      // transition={{ duration: 1, ease: "easeOut" }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
     >
       {children}
     </motion.section>
@@ -20,38 +20,43 @@ const Section = ({ children, className }) => {
 };
 
 export default function Interface() {
-  // const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  // useEffect(() => {
-  //   if (!isLoaded) {
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     document.body.style.overflow = "auto";
-  //   }
+  useEffect(() => {
+    if (!isLoaded) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
 
-  //   // Cleanup on unmount
-  //   return () => {
-  //     document.body.style.overflow = "auto";
-  //   };
-  // }, [isLoaded]);
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isLoaded]);
 
   return (
     <div>
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {!isLoaded && <PreLoader setIsLoaded={setIsLoaded} />}
-      </AnimatePresence> */}
+      </AnimatePresence>
 
-      <Section />
-
-      
-
-      <Section>
+      <motion.div
+        className="canvas-container"
+        style={{
+          backgroundColor: "#FFF5EE",
+          visibility: isLoaded ? "visible" : "hidden",
+        }}
+        initial={{ opacity: 0 }}
+        animate={isLoaded ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
         <Experience />
-      </Section>
+      </motion.div>
 
-      <Section className="project-container">
+      {/* <Section className="project-container">
         <ProjectExperience />
-      </Section>
+      </Section> */}
       <ProjectList />
 
       {/* <Section>

@@ -17,11 +17,11 @@ export default function PreLoader({ setIsLoaded }) {
         }
         return prev;
       });
-    }, 16);
+    }, 8);
 
     if (displayedProgress >= 100) {
       clearInterval(interval);
-      setTimeout(() => setIsLoaded(true), 500);
+      setTimeout(() => setIsLoaded(true), 200);
     }
 
     return () => clearInterval(interval);
