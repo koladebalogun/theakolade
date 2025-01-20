@@ -21,7 +21,7 @@ export default function PreLoader({ setIsLoaded }) {
 
     if (displayedProgress >= 100) {
       clearInterval(interval);
-      setTimeout(() => setIsLoaded(true), 200);
+      setTimeout(() => setIsLoaded(true), 100);
     }
 
     return () => clearInterval(interval);
@@ -40,7 +40,7 @@ export default function PreLoader({ setIsLoaded }) {
         <Canvas>
           <ambientLight intensity={0.5} />
           <directionalLight position={[5, 5, 5]} />
-          {/* <Robo /> */}
+          <Robo />
         </Canvas>
       </div>
     </motion.div>
