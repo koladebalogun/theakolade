@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Center, ScrollControls, Text } from "@react-three/drei";
 import { getProject } from "@theatre/core";
@@ -49,6 +49,8 @@ export const Experience = () => {
           outputEncoding: sRGBEncoding,
         }}
       >
+        <Suspense fallback={null}>
+
         <ScrollControls pages={3.5} maxSpeed={0.1}>
           <SheetProvider sheet={sheet}>
             <Scene />
@@ -67,6 +69,7 @@ export const Experience = () => {
             </e.group>
           </SheetProvider>
         </ScrollControls>
+        </Suspense>
       </Canvas>
 
       <SceneOneContent />
