@@ -20,35 +20,35 @@ const Section = ({ children, className }) => {
 };
 
 export default function Interface() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
-    if (!isLoaded) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+  // useEffect(() => {
+  //   if (!isLoaded) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
 
-    // Cleanup on unmount
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isLoaded]);
+  //   // Cleanup on unmount
+  //   return () => {
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, [isLoaded]);
 
   return (
     <div>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {!isLoaded && <PreLoader setIsLoaded={setIsLoaded} />}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       <motion.div
         className="canvas-container"
         style={{
           backgroundColor: "#000",
-          visibility: isLoaded ? "visible" : "hidden",
+          visibility: "visible",
         }}
         initial={{ opacity: 0 }}
-        animate={isLoaded ? { opacity: 1 } : { opacity: 0 }}
+        animate={ { opacity: 1 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
         <Experience />
