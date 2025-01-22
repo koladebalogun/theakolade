@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Experience } from "./experience/Experience";
 import ProjectExperience from "./experience/ProjectExperience";
-import ContactUsExperience from "./experience/ContactUsExperience";
+// import ContactUsExperience from "./experience/ContactUsExperience";
 import ProjectList from "./scenes/project-section/ProjectList";
 import PreLoader from "./scenes/preloader/PreLoader";
 
@@ -44,7 +44,7 @@ export default function Interface() {
       <motion.div
         className="canvas-container"
         style={{
-          backgroundColor: "#FFF5EE",
+          backgroundColor: "#000",
           visibility: isLoaded ? "visible" : "hidden",
         }}
         initial={{ opacity: 0 }}
@@ -54,9 +54,9 @@ export default function Interface() {
         <Experience />
       </motion.div>
 
-      {/* <Section className="project-container">
+      <Section className="project-container">
         <ProjectExperience />
-      </Section> */}
+      </Section>
       <ProjectList />
 
       {/* <Section>
