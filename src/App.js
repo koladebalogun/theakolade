@@ -11,9 +11,11 @@ function App() {
 
   return (
     <>
+    <Suspense fallback={null}>
       <CustomCursor />
       {/* <Navbar /> */}
       <Interface />
+    </Suspense>
     </>
   );
 }

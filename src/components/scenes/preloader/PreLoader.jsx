@@ -1,23 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense, memo } from "react";
 import { motion } from "framer-motion";
 import { useProgress } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Robo from "../../models/Robo";
+
+// Lazy load the Robo component
+const Robo = lazy(() => import("../../models/Robo"));
+
+// Memoized Canvas to prevent unnecessary re-renders
+const MemoizedCanvas = memo(() => (
+  <Canvas>
+    <ambientLight intensity={0.5} />
+    <hemisphereLight intensity={0.7} groundColor="gray" />
+    <Suspense fallback={null}>
+      <Robo />
+    </Suspense>
+  </Canvas>
+));
 
 export default function PreLoader({ setIsLoaded }) {
   const { progress } = useProgress(); // Track actual loading progress
   const [displayedProgress, setDisplayedProgress] = useState(0);
 
   useEffect(() => {
-    // Smoothly update displayed progress
+    // Throttle updates to displayed progress
     const interval = setInterval(() => {
-      setDisplayedProgress((prev) => {
-        if (prev < progress) {
-          return Math.min(prev + 1, progress);
-        }
-        return prev;
-      });
-    }, 8);
+      setDisplayedProgress((prev) =>
+        prev < progress ? Math.min(prev + 5, progress) : prev
+      );
+    }, 50);
 
     if (displayedProgress >= 100) {
       clearInterval(interval);
@@ -37,11 +47,7 @@ export default function PreLoader({ setIsLoaded }) {
     >
       <div className="preloader-inner">
         <h1 className="preloader-text">Loading...</h1>
-        <Canvas>
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[5, 5, 5]} />
-          <Robo />
-        </Canvas>
+        {displayedProgress < 100 && <MemoizedCanvas />}
       </div>
     </motion.div>
   );

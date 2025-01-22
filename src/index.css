@@ -31,6 +31,7 @@
   box-sizing: border-box;
 }
 
+
 html,
 body,
 #root {
@@ -39,6 +40,15 @@ body,
   margin: 0;
   padding: 0;
   /* background-color: #000; */
+}
+
+.color-changing-box {
+  background-color: #000;
+  transition: background-color 1.5s ease;
+}
+
+.color-changing-box.in-view {
+  background-color: #fff;
 }
 
 ::-webkit-scrollbar {
