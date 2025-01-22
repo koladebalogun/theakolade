@@ -54,10 +54,10 @@ export default function Interface() {
         <Experience />
       </motion.div>
 
-      {/* <Section className="project-container">
+      <Section className="project-container">
         <ProjectExperience />
       </Section>
-      <ProjectList /> */}
+      <ProjectList />
 
       {/* <Section>
         <ContactUsExperience />
