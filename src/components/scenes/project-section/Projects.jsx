@@ -35,10 +35,10 @@ export default function Projects({ setActiveMenu }) {
           })}
         </ul>
 
-        <div className="projectlist-scroll-indicator-wrapper">
+        {/* <div className="projectlist-scroll-indicator-wrapper">
           <p>Scroll Down</p>
           <div className="projectlist-indicator"></div>
-        </div>
+        </div> */}
       </div>
     </>
   );

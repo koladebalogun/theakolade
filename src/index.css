@@ -628,8 +628,8 @@ body {
 .indicator-wrapper {
   position: absolute;
   z-index: 1;
-  bottom: 12%;
-  right: 10%;
+  bottom: 2%;
+  right: 2%;
 }
 
 .indicator-wrapper p {
@@ -639,6 +639,7 @@ body {
   font-family: "Amatic SC", sans-serif;
   font-weight: 700;
   font-style: normal;
+  color: #fff;
 }
 
 .indicator {
@@ -646,7 +647,7 @@ body {
   position: relative;
   width: 50px;
   height: 80px;
-  border: 2px solid #000;
+  border: 2px solid #fff;
   border-radius: 50px;
   right: -10px;
 }
@@ -656,7 +657,7 @@ body {
   position: absolute;
   width: 10px;
   height: 10px;
-  background: #000;
+  background: #fff;
   margin: auto;
   left: 0;
   right: 0;
@@ -787,6 +788,149 @@ body {
   border-radius: 50%;
   animation: animate 1.5s linear infinite;
 }
+
+/* Footer */
+
+.footer-container {
+  position: relative;
+  height: 800px;
+  clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  height: 800px;
+  width: 100%;
+}
+
+
+.content-container {
+  background-color: #800000;
+  padding: 2rem 3rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section2-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.section2-heading {
+  font-size: 13vw;
+  line-height: 0.8;
+  margin-top: 2.5rem;
+  font-family: blanquotey;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+}
+
+.section2-container p{
+  color: #fff;
+  font-family: "Apercu Mono pro";
+}
+
+.nav-container {
+  display: flex;
+  flex-shrink: 0;
+  gap: 5rem;
+}
+
+.nav-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 50px;
+
+}
+
+.nav-column p {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Apercu Mono pro";
+  cursor: pointer;
+}
+
+.nav-title {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Apercu Mono pro";
+}
+
+.nav-container {
+  padding: 16px;
+}
+
+.nav-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between items */
+}
+
+.nav-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #ffffff80; /* Slightly dimmed text */
+}
+
+/* Copyable Text Styles */
+.copyable {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.copyable:hover {
+  color: #f39c12; /* Example hover color */
+  text-decoration: none;
+}
+
+/* Copy Message Styles */
+.copy-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.copied-message {
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0;
+  animation: fadeInOut 2s forwards;
+}
+
+/* Fade-In and Fade-Out Animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* KEYFRAMES */
 
 @keyframes sideways {
   0% {

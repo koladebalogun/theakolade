@@ -76,12 +76,10 @@ export const Experience = () => {
           <h3>Kolade Balogun 2024</h3>
         </div>
 
-        {currentScene === 1 && (
           <div className="indicator-wrapper">
             <p>Scroll Down</p>
             <div className="indicator"></div>
           </div>
-        )}
       </div>
     </>
   );

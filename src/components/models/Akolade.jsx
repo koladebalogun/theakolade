@@ -24,7 +24,7 @@ export default function Akolade() {
   }, [model]);
 
   useFrame((state, delta) => {
-    if (currentScene >= 2 && headRef.current) {
+    if (currentScene >= 2 && currentScene <= 5 && headRef.current) {
       clock += speed;
       headRef.current.rotation.x = Math.sin(clock) * amplitude; // Bop effect
     }
