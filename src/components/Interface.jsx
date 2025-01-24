@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Experience } from "./experience/Experience";
 import ProjectExperience from "./experience/ProjectExperience";
-// import ContactUsExperience from "./experience/ContactUsExperience";
 import ProjectList from "./scenes/project-section/ProjectList";
 import PreLoader from "./scenes/preloader/PreLoader";
 
@@ -58,10 +57,6 @@ export default function Interface() {
         <ProjectExperience />
       </Section>
       <ProjectList />
-
-      {/* <Section>
-        <ContactUsExperience />
-      </Section> */}
     </div>
   );
 }

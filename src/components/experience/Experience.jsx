@@ -37,6 +37,11 @@ export const Experience = () => {
 
   return (
     <>
+      <nav>
+        <div className="logo">
+          k./b
+        </div>
+      </nav>
       <Canvas
         shadows
         style={{
@@ -72,9 +77,9 @@ export const Experience = () => {
       <SceneOneContent />
 
       <div>
-        <div className="side-info">
+        {/* <div className="side-info">
           <h3>Kolade Balogun 2024</h3>
-        </div>
+        </div> */}
 
           <div className="indicator-wrapper">
             <p>Scroll Down</p>
