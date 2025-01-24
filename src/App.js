@@ -11,11 +11,11 @@ function App() {
 
   return (
     <>
-    <>
+    <Suspense fallback={null}>
       <CustomCursor />
       <Interface />
       <Footer />
-    </>
+    </Suspense>
     </>
   );
 }
