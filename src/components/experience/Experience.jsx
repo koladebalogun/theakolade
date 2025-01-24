@@ -54,9 +54,9 @@ export const Experience = () => {
           outputEncoding: sRGBEncoding,
         }}
       >
-        {/* <ScrollControls pages={3.5} maxSpeed={0.1}>
+        <ScrollControls pages={3.5} maxSpeed={0.1}>
           <SheetProvider sheet={sheet}>
-            <Scene />
+            {/* <Scene /> */}
 
             <e.group ref={textRef} theatreKey="text">
               <Center>
@@ -71,7 +71,7 @@ export const Experience = () => {
               </Center>
             </e.group>
           </SheetProvider>
-        </ScrollControls> */}
+        </ScrollControls>
       </Canvas>
 
       <SceneOneContent />
