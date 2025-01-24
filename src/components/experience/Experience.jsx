@@ -56,7 +56,7 @@ export const Experience = () => {
       >
         <ScrollControls pages={3.5} maxSpeed={0.1}>
           <SheetProvider sheet={sheet}>
-            {/* <Scene /> */}
+            <Scene />
 
             <e.group ref={textRef} theatreKey="text">
               <Center>
