@@ -49,7 +49,7 @@ export default function Scene() {
     <>
       <Suspense fallback={null}>
         {/* Lazy load the HDR environment map */}
-        <Environment files={"/env/map8k.hdr"} />
+        <Environment files={"/env/map.hdr"} />
       </Suspense>
 
       {/* Lighting */}
