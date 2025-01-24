@@ -773,6 +773,10 @@ body {
     font-size: 16px;
   }
 
+  .project-container{
+    height: 120vh;
+  }
+
   .project_header1 {
     top: 50vh;
     font-size: 30vw;
@@ -798,6 +802,19 @@ body {
 
   .indicator-wrapper p {
     color: #fff;
+  }
+
+  .content-container {
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .section2-heading{
+    font-size: 10vw;
   }
 }
 
