@@ -31,7 +31,7 @@ export default function PreLoader({ setIsLoaded }) {
 
     if (displayedProgress >= 100) {
       clearInterval(interval);
-      setTimeout(() => setIsLoaded(true), 100);
+      setTimeout(() => setIsLoaded(true), 200);
     }
 
     return () => clearInterval(interval);
@@ -42,7 +42,7 @@ export default function PreLoader({ setIsLoaded }) {
       initial={{ opacity: 1 }}
       animate={displayedProgress === 100 ? { opacity: 0 } : { opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ opacity: { duration: 1, ease: "easeInOut" } }}
+      transition={{ opacity: { duration: 1.5, ease: "easeInOut" } }}
       className="preloader-wrapper"
     >
       <div className="preloader-inner">

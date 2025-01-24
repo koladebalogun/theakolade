@@ -48,7 +48,7 @@ export default function Interface() {
         }}
         initial={{ opacity: 0 }}
         animate={isLoaded ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
       >
         <Experience />
       </motion.div>
